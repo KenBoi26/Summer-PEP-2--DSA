@@ -1,0 +1,26 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int searchInsert(vector<int>& nums, int target) {
+        int left = 0;
+        int right = nums.size()-1;
+
+        while(left < right){
+            int mid = (left+right)/2;
+
+            if(nums[mid] >= target) right = mid;
+            else left = mid + 1;
+        }
+
+        if(right == nums.size()-1 && target > nums[right]) return right+1;
+        return right;
+    }
+};
+
+int main(){
+
+
+    return 0;
+}
