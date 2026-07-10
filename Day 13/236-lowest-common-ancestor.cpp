@@ -1,6 +1,15 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+class TreeNode {
+public:
+    int val;
+    TreeNode *left;
+    TreeNode *right;
+
+    TreeNode(int val) : val(val), left(nullptr), right(nullptr) {}
+};
+
 class Solution {
 public:
     TreeNode* lowestCommonAncestor(TreeNode* root, TreeNode* p, TreeNode* q) {
